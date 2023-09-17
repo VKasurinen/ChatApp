@@ -1,4 +1,5 @@
 import "dotenv/config";
+import {API_KEY} from "@env";
 
 export default{
   "expo": {
