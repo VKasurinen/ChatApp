@@ -24,6 +24,9 @@ const AuthenticatedUserProvider = ({children}) => {
   )
 }
 
+
+
+
 const ChatStack = () => {
   return (
     <Stack.Navigator defaultScreenOptions={{component: HomeScreen}}>
@@ -43,9 +46,12 @@ const AuthStack = () => {
 }
 
 
+
+//Alkuperäinen
 const RootNavigator = () => {
   const {user, setUser} = useContext(AuthUserContext);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth,
       async authenticatedUser => { 
@@ -55,6 +61,7 @@ const RootNavigator = () => {
     );
     return () => unSubscribe();
     }, [user]);
+
     if(loading){
       return ( 
         <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>

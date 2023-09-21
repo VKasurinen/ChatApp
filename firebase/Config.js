@@ -1,8 +1,11 @@
 
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
 import Constants from "expo-constants"
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getAuth} from 'firebase/auth';
+
+
 
 
 // Your web app's Firebase configuration
@@ -37,6 +40,8 @@ const firebaseConfig = {
   messagingSenderId: "215499383515",
   appId: "1:215499383515:web:cc7f4504ed355459b662fe"
 };
+
+
 
 
 // Initialize Firebase

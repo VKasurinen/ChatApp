@@ -32,7 +32,10 @@ const LoginScreen = ({ navigation }) => {
     const handleLogin = () => {
         if (email !== "" && password !== "") {
             signInWithEmailAndPassword(auth, email, password)
-            .then(() => console.log("Login success"))
+            .then(() =>  {
+              console.log("Login success")
+              console.log("Logged in with", email)
+            }) 
             .catch((err) => Alert.alert("Login error", err.message));
         }
     }
